@@ -3,10 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>notesShare</title>
+    <title>Share Class Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .note-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .note-form input, .note-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .note-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .note-form button:hover {
+            background-color: #45a049;
+        }
+
+        .note-list {
+            margin-top: 30px;
+        }
+
+        .note-card {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .note-card h3 {
+            margin-top: 0;
+        }
+
+        .note-card p {
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-<hr><h1> NotesShare</h1><hr>
-    
+    <header>
+        <h1>Share Your Class Notes</h1>
+        <p>Contribute your knowledge and help others learn!</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Form to share notes (Static Form) -->
+            <div class="note-form">
+                <h2>Share Your Notes</h2>
+                <form>
+                    <input type="text" placeholder="Note Title" disabled><br>
+                    <textarea rows="5" placeholder="Write your notes here..." disabled></textarea><br>
+                    <button type="button" disabled>Share Note</button>
+                </form>
+            </div>
+
+            <!-- Section to display shared notes (Static Notes) -->
+            <div class="note-list">
+                <h2>Shared Notes</h2>
+                <div class="note-card">
+                    <h3>Math 101 - Week 1 Notes</h3>
+                    <p>This is a brief summary of the topics covered in the first week of Math 101, including algebra, calculus basics, and problem-solving strategies.</p>
+                </div>
+                <div class="note-card">
+                    <h3>History 202 - Ancient Civilizations</h3>
+                    <p>Summary of key events from the rise of ancient civilizations, including Egypt, Mesopotamia, and the early empires in Asia.</p>
+                </div>
+                <div class="note-card">
+                    <h3>Physics 303 - Thermodynamics</h3>
+                    <p>Detailed notes on thermodynamics, covering laws of thermodynamics, heat transfer, and the work of famous physicists like Carnot and Boltzmann.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Class Notes Sharing Platform | Created with ❤️</p>
+    </footer>
 </body>
 </html>
