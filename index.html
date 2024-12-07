@@ -94,7 +94,6 @@
         <h1> share  Notes</h1>
         <p>Contribute your knowledge and help others learn!</p>
     </header>
-
     <main>
         <div class="container">
             <!-- Form to share notes (Static Form) -->
@@ -112,7 +111,7 @@
                 <h2>Shared Notes</h2>
                 <div class="note-card">
                     <h3>oops 301</h3>
-                    <a href="F:\gitdemo\notesShare\notes\CPP-Other-BCA.pdf" download="F:\gitdemo\notesShare\notes\CPP-Other-BCA.pdf">object oriented programming , is the subject of C++</a>
+                    <a href="#" id="download-link">object oriented programming , is the subject of C++</a>
                 </div>
                 <div class="note-card">
                     <h3>History 202 - Ancient Civilizations</h3>
@@ -129,5 +128,28 @@
     <footer>
         <p>Class Notes Sharing Platform | Created with ❤️</p>
     </footer>
+    <script>
+        // Store a sample base64-encoded PDF in localStorage
+        const pdfBase64 = 'data:application/pdf;base64,JVBEERi0xLJQKcTl8uXr';
+        localStorage.setItem('pdffile', pdfBase64);
+
+        // Add event listener to the download link
+        document.getElementById('download-link').addEventListener('click', function(e) {
+            e.preventDefault();  // Prevent the default link action
+
+            const pdfFile = localStorage.getItem('pdffile');  // Retrieve the PDF base64 data from localStorage
+
+            if (pdfFile) {
+                // Create a temporary link element to trigger the download
+                const link = document.createElement('a');
+                link.href = pdfFile;  // Set the href to the PDF data
+                link.download = 'download-file.pdf';  // Set the filename for the downloaded file
+
+                link.click();  // Simulate a click to start the download
+            } else {
+                alert('No PDF file found');  // Alert the user if no PDF data is found in localStorage
+            }
+        });
+    </script>
 </body>
 </html>
