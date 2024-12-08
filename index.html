@@ -12,7 +12,13 @@
             background-color: #f4f4f9;
         }
 
-      
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
         main {
             padding: 20px;
         }
@@ -20,6 +26,30 @@
         .container {
             max-width: 800px;
             margin: auto;
+        }
+
+        .note-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .note-form input, .note-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .note-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
         .note-list {
@@ -35,73 +65,45 @@
         
         }
     
+
         .note-card h3 {
             margin-top: 0;
+        }
+
+        .note-card p {
+            margin: 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
         .a{
             text-decoration-color: none;
         }
-        .wrapper{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-a{
-  display: block;
-  width: 200px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: #333;
-  border: 2px solid #333;
-  letter-spacing: 2px;
-  text-align: center;
-  position: relative;
-  transition: all .35s;
-}
-
-a span{
-  position: relative;
-  z-index: 2;
-}
-
-a:after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background: #ff003b;
-  transition: all .35s;
-}
-
-a:hover{
-  color: #fff;
-}
-
-a:hover:after{
-  width: 100%;
-}
     </style>
 </head>
 <body>
+    <header>
+        <h1>shared  Notes</h1>
+    </header>
     <main>
         <div class="container">
             <!-- Form to share notes (Static Form) -->
-            <div>
+            <div class="note-form">
                 <h2>Notes of BCA 3 semester </h2>  
             </div>
-            <div class="note-card">
+
+            <!-- Section to display shared notes (Static Notes) -->
+            <div class="note-list">
                 <h1>Shared Notes </h2>
                     <h3>oops 301</h3>
-                    <div class="wrapper">
-                        <a href="https://drive.google.com/drive/folders/1wcAt6aPY9-jtcKiGX8ustcB4Li6jFUWW?usp=sharing"><span>Download</span></a>
-                    </div>
+                    <a href="https://drive.google.com/drive/folders/1wcAt6aPY9-jtcKiGX8ustcB4Li6jFUWW?usp=sharing" class="a">Download</a>
                 </div>
                 <div class="note-card">
                     <h3>Dsa 302 </h3>
